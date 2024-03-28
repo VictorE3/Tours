@@ -12,7 +12,7 @@ const Home = () => {
 
   const fetchTours = async () => {
     try {
-      const response = await fetch(url, { mode: "no-cors" });
+      const response = await fetch(url);
       const tours = await response.json();
       setLoading(false);
       setTours(tours);
