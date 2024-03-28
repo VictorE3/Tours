@@ -4,7 +4,7 @@ import Tour from "@/components/Tour";
 import React, { useEffect, useState } from "react";
 import { connectToDB } from "@/lib/connect";
 import tour from "@/lib/definitions";
-const url = "http://localhost:3000/api";
+const url = "https://tours-rouge.vercel.app/api";
 
 const Home = () => {
   const [tours, setTours] = useState([]);
