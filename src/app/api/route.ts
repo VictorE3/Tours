@@ -2,6 +2,7 @@ import { connectToDB } from "@/lib/connect";
 import { Tour } from "@/lib/models";
 import { NextResponse } from "next/server";
 import { NextApiRequest } from "next";
+import { NextRequest } from "next/server";
 
 interface Item {
   img: string;
@@ -9,7 +10,7 @@ interface Item {
   info: string;
 }
 
-export const GET = async (req: NextApiRequest) => {
+export const GET = async (req: NextRequest) => {
   try {
     connectToDB();
     const tours = await Tour.find();
